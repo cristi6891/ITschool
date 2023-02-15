@@ -1,0 +1,19 @@
+public class MaxValue {
+
+    public static void main(String[] args) {
+
+        int[] problemArray = {1, 5, 3, 9, 8, 15, 4, 3};
+        for (int a = 0; (a + 1) < problemArray.length; a = 0) {
+            if (problemArray[a] < problemArray[a + 1]) {
+                problemArray[a] = problemArray[a + 1];
+                for (int b = (a + 1); b < problemArray.length; b++) {
+                    if (problemArray[a] < problemArray[b]) {
+                        problemArray[a] = problemArray[b];
+                    }
+                }
+                System.out.println("Max value is " + problemArray[a]);
+            }
+
+        }
+    }
+}
